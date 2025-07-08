@@ -1,0 +1,259 @@
+PS C:\Users\RG> & "C:/Program Files/Python312/python.exe" c:/Users/RG/Desktop/RAG_CHAGPT.py
+c:\Users\RG\Desktop\RAG_CHAGPT.py:4: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:
+
+>> from langchain.vectorstores import Chroma
+
+with new imports of:
+
+>> from langchain_community.vectorstores import Chroma
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.vectorstores import Chroma                # Vector DB lokal
+c:\Users\RG\Desktop\RAG_CHAGPT.py:5: LangChainDeprecationWarning: Importing HuggingFaceEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:
+
+>> from langchain.embeddings import HuggingFaceEmbeddings
+
+with new imports of:
+
+>> from langchain_community.embeddings import HuggingFaceEmbeddings
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>    
+  from langchain.embeddings import HuggingFaceEmbeddings   # Untuk membuat embedding teks
+C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\langchain\llms\__init__.py:549: LangChainDeprecationWarning: Importing LLMs from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.llms import Ollama`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+📥 Memuat dokumen dari folder...
+🔍 Membuat retriever dari dokumen...
+c:\Users\RG\Desktop\RAG_CHAGPT.py:38: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+  embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+2025-06-13 13:13:16.251048: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-06-13 13:13:18.033382: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+🤖 Mengaktifkan chatbot Phi-4 via Ollama...
+c:\Users\RG\Desktop\RAG_CHAGPT.py:53: LangChainDeprecationWarning: The class `Ollama` was deprecated in LangChain 0.3.1 and will be removed in 1.0.0. An updated version of the class exists in the :class:`~langchain-ollama package and should be used instead. To use it run `pip install -U :class:`~langchain-ollama` and import as `from :class:`~langchain_ollama import OllamaLLM``.
+  llm = Ollama(model="phi4", base_url="http://localhost:11434", temperature=0.3)
+✅ Chatbot siap digunakan! Ketik pertanyaan (dalam Bahasa Indonesia atau Inggris)
+Ketik 'exit' untuk keluar.
+
+Kamu: you know about Malzar?
+c:\Users\RG\Desktop\RAG_CHAGPT.py:93: LangChainDeprecationWarning: The method `Chain.run` was deprecated in langchain 0.1.0 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  response = chatbot.run(user_input)
+Chatbot: Based on the provided context, Malzar appears to be a significant antagonist in Ardan's journey. He is associated with the "Shadow of Malzar," which is described as an elite army that constantly poses threats to Ardan and his allies. The goal of finding the Sword of Light suggests that it is crucial for stopping Malzar. Additionally, Liana mentions preventing the world from falling into the hands of the "Demon King," implying that Malzar may hold a title or role similar to that of a Demon King.
+
+Overall, while specific details about Malzar's identity and motivations are not provided in the context, he is clearly portrayed as a formidable enemy with considerable power and influence.
+
+Kamu: siapa itu Malzar?
+Chatbot: Malzar adalah karakter yang digambarkan sebagai "penguasa abadi" dalam konteks ini. Dia tampaknya menjadi antagonis utama yang dipimpin oleh pasukan elite dikenal sebagai Bayangan Malzar. Bentengnya terletak di Neraka Merah, dan dia menghadapi serangan dari Ardan dan kawan-kawannya setelah menemukan Pedang Cahaya di kuil kuno.
+
+Kamu: apakah bisa kamu ceritakan ulang secara singkat?
+Chatbot: Dalam Bab 3 yang berjudul "Pertempuran Terakhir," Ardan dan kawan-kawannya berhasil menemukan Pedang Cahaya di kuil kuno. Dengan senjata legendaris ini, mereka memutuskan untuk menyerang benteng Malzar yang terletak di Neraka Merah. Di sana, mereka menghadapi berbagai rintangan, termasuk pasukan elite Bayangan Malzar yang selalu mengintai.
+
+Malzar, penguasa abadi dari Neraka Merah, meremehkan mereka dengan berkata: "Kau pikir bisa mengalahkanku, manusia lemah? Aku adalah penguasa abadi!" Namun, Ardan dan kawan-kawannya tetap berjuang bersama-sama untuk menghadapi tantangan besar ini.
+
+Kamu: ceritakan sedikit tentang ceritanya dari awal sampai akhir 
+Chatbot: Cerita ini berpusat pada karakter utama bernama Ardan dan kawan-kawannya yang terlibat dalam perjuangan melawan penguasa jahat, Malzar. Berikut adalah ringkasan dari cerita tersebut:
+
+1. **Awal Cerita**:
+   - Ardan dan teman-temannya menemukan Pedang Cahaya di kuil kuno. Pedang ini memiliki kekuatan besar yang dapat membantu mereka dalam pertarungan melawan Malzar.
+
+2. **Pertempuran Terakhir**:
+   - Setelah mendapatkan Pedang Cahaya, Ardan dan kelompoknya memutuskan untuk menyerang benteng Malzar yang terletak di Neraka Merah.
+   - Mereka menghadapi banyak rintangan selama perjalanan mereka menuju benteng tersebut. Salah satu tantangan utamanya adalah Bayangan Malzar, pasukan elite yang selalu mengintai dan berusaha menghalangi kemajuan Ardan dan kawan-kawannya.
+
+3. **Konfrontasi dengan Malzar**:
+   - Di dalam benteng, Malzar menyuarakan kekuasaannya dengan kata-kata: "Kau pikir bisa mengalahkanku, manusia lemah? Aku adalah penguasa abadi!" Ini menunjukkan bahwa Malzar percaya diri dan yakin akan ketidakmungkinan dikalahkan.
+
+4. **Akhir Cerita**:
+   - Meskipun cerita tidak memberikan detail akhir yang spesifik, dapat diasumsikan bahwa Ardan dan kawan-kawannya harus menggunakan kekuatan Pedang Cahaya serta kerja sama tim untuk mengatasi rintangan dan berhadapan langsung dengan Malzar dalam pertempuran terakhir.
+
+Cerita ini menekankan tema persahabatan, pengorbanan, dan keberanian dalam menghadapi musuh yang tampaknya tak kalahkan.
+
+Kamu: can you create story about hero from the data?
+Chatbot: Certainly! Here's a continuation of Ardan's story based on the provided context:
+
+---
+
+**Chapter 2: The Quest Begins**
+
+With determination burning in his heart, Ardan set out on his quest to find the Sword of Light. He knew that this journey would be fraught with danger and challenges, but he was resolute in his mission to defeat Malzar and save the human world.
+
+Ardan's first stop was the Enchanted Forest, a mystical place rumored to hold many secrets. The forest was dense and filled with strange creatures, some friendly and others not so much. Ardan relied on his courage and quick thinking as he navigated through its winding paths.
+
+One day, while resting by a crystal-clear stream, Ardan encountered an old traveler named Eldrin. Eldrin had heard of the Sword of Light and offered to guide Ardan to the Temple of Dawn, where it was said to be hidden.
+
+**Chapter 3: The Trials of the Temple**
+
+The Temple of Dawn was located atop the treacherous Mount Solara. To reach it, Ardan and Eldrin faced numerous trials that tested their strength, wisdom, and resolve. They crossed a chasm with only a narrow bridge, solved ancient riddles inscribed on stone tablets, and battled shadowy creatures sent by Malzar to thwart them.
+
+Despite the hardships, Ardan's spirit remained unbroken. He learned valuable lessons from each trial, growing stronger both physically and mentally. Eldrin, impressed by Ardan's bravery and determination, revealed that only a true hero could wield the Sword of Light.
+
+**Chapter 4: The Awakening**
+
+Finally reaching the Temple of Dawn, Ardan stood before an altar where the Sword of Light was said to rest. As he approached, the temple began to glow with a radiant light. The sword emerged from its resting place, recognizing Ardan as its destined wielder.
+
+With the Sword of Light in hand, Ardan felt a surge of power and hope. He knew that his journey had only just begun. Armed with this legendary weapon, he was ready to face Malzar and bring peace back to Harmonia.
+
+**Chapter 5: The Final Battle**
+
+Ardan's quest led him to the heart of the underworld, where Malzar awaited. The battle between Ardan and Malzar was fierce, with darkness clashing against light. But Ardan's courage and the power of the Sword of Light proved too much for Malzar.
+
+In a final act of defiance, Malzar unleashed his most powerful attack. However, Ardan stood firm, channeling all his strength into one decisive strike. The Sword of Light blazed with an intense radiance, vanquishing Malzar and restoring balance to both worlds.
+
+With the Demon King defeated, Ardan returned to Harmonia as a hero. The village was rebuilt, and peace reigned once more. Ardan's bravery and unwavering spirit inspired all who heard his story, reminding them that even in the darkest times, light could always prevail.
+
+---
+
+This is just one possible continuation of Ardan's adventure. Feel free to expand or modify it as you see fit!
+
+Kamu: exit
+👋 Sampai jumpa!
+
+
+c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:4: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:
+
+>> from langchain.vectorstores import Chroma
+
+with new imports of:
+
+>> from langchain_community.vectorstores import Chroma
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.vectorstores import Chroma                # Vector DB lokal
+c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:5: LangChainDeprecationWarning: Importing HuggingFaceEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:
+
+>> from langchain.embeddings import HuggingFaceEmbeddings
+
+with new imports of:
+
+>> from langchain_community.embeddings import HuggingFaceEmbeddings
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.embeddings import HuggingFaceEmbeddings   # Untuk membuat embedding teks
+C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\langchain\llms\__init__.py:549: LangChainDeprecationWarning: Importing LLMs from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:   
+
+`from langchain_community.llms import Ollama`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+📥 Memuat dokumen dari folder...
+🔍 Membuat retriever dari dokumen...
+c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:38: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+  embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+2025-06-23 15:24:15.026324: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-06-23 15:24:18.431286: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+🤖 Mengaktifkan chatbot Phi-4 via Ollama...
+c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:53: LangChainDeprecationWarning: The class `Ollama` was deprecated in LangChain 0.3.1 and will be removed in 1.0.0. An updated version of the class exists in the :class:`~langchain-ollama package and should be used instead. To use it run `pip install -U :class:`~langchain-ollama` and import as `from :class:`~langchain_ollama import OllamaLLM``.
+  llm = Ollama(model="phi4", base_url="http://localhost:11434", temperature=0.3)
+✅ Chatbot siap digunakan! Ketik pertanyaan (dalam Bahasa Indonesia atau Inggris)
+Ketik 'exit' untuk keluar.
+
+c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:4: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:
+
+>> from langchain.vectorstores import Chroma
+
+with new imports of:
+
+>> from langchain_community.vectorstores import Chroma
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.vectorstores import Chroma                # Vector DB lokal
+c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:5: LangChainDeprecationWarning: Importing HuggingFaceEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:
+
+>> from langchain.embeddings import HuggingFaceEmbeddings
+
+with new imports of:
+
+>> from langchain_community.embeddings import HuggingFaceEmbeddings
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.embeddings import HuggingFaceEmbeddings   # Untuk membuat embedding teks
+C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\langchain\llms\__init__.py:549: LangChainDeprecationWarning: Importing LLMs from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:   
+
+`from langchain_community.llms import Ollama`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+📥 Memuat dokumen dari folder...
+🔍 Membuat retriever dari dokumen...
+c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:38: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+  embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+2025-06-24 14:59:30.003725: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-06-24 14:59:33.922967: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+🤖 Mengaktifkan chatbot Phi-4 via Ollama...
+c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:53: LangChainDeprecationWarning: The class `Ollama` was deprecated in LangChain 0.3.1 and will be removed in 1.0.0. An updated version of the class exists in the :class:`~langchain-ollama package and should be used instead. To use it run `pip install -U :class:`~langchain-ollama` and import as `from :class:`~langchain_ollama import OllamaLLM``.
+  llm = Ollama(model="phi4", base_url="http://localhost:11434", temperature=0.3)
+✅ Chatbot siap digunakan! Ketik pertanyaan (dalam Bahasa Indonesia atau Inggris)
+Ketik 'exit' untuk keluar.
+
+Kamu: buatkan saya quest game dari ceritanya
+c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:93: LangChainDeprecationWarning: The method `Chain.run` was deprecated in langchain 0.1.0 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  response = chatbot.run(user_input)
+❌ Terjadi kesalahan: Ollama call failed with status code 500. Details: {"error":"model requires more system memory (11.0 GiB) than is available (8.7 GiB)"}
+
+Kamu: exit
+👋 Sampai jumpa!
+
+🤖 Mengaktifkan chatbot Phi-4 via Ollama...
+c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:53: LangChainDeprecationWarning: The class `Ollama` was deprecated in LangChain 0.3.1 and will be removed in 1.0.0. An updated version of the class exists in the :class:`~langchain-ollama package and should be used instead. To use it run `pip install -U :class:`~langchain-ollama` and import as `from :class:`~langchain_ollama import OllamaLLM``.
+  llm = Ollama(model="phi4", base_url="http://localhost:11434", temperature=0.3)
+✅ Chatbot siap digunakan! Ketik pertanyaan (dalam Bahasa Indonesia atau Inggris)
+Ketik 'exit' untuk keluar.
+
+Kamu: bisakah kamu membuat quest game mengenai ceritanya?
+c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:93: LangChainDeprecationWarning: The method `Chain.run` was deprecated in langchain 0.1.0 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  response = chatbot.run(user_input)
+Chatbot: Tentu! Berikut adalah konsep untuk sebuah quest game berdasarkan konteks yang diberikan:
+
+### Judul Game: "Pedang Cahaya: Pertempuran Terakhir"
+
+#### Latar Belakang Cerita:
+Dunia ini terancam oleh kekuatan gelap Malzar, penguasa abadi dari Neraka Merah. Ardan dan kawan-kawannya telah menemukan Pedang Cahaya di kuil kuno, senjata legendaris yang mungkin menjadi satu-satunya harapan untuk mengalahkan Malzar.
+
+#### Tujuan Utama:
+Kamu adalah salah satu dari para penantang yang berusaha membantu Ardan dan teman-temannya dalam misi mereka untuk menyerang benteng Malzar dan mengakhiri tirani abadi tersebut.
+
+### Quests:
+
+1. **Mencari Pedang Cahaya:**
+   - **Deskripsi:** Perjalanan dimulai dengan mencari tahu lokasi kuil kuno di mana Pedang Cahaya tersembunyi.
+   - **Tugas:** Lihat petualangan melalui hutan lebat dan menyelesaikan teka-teki untuk mendapatkan akses ke kuil.
+
+2. **Pengumpulan Pasukan:**
+   - **Deskripsi:** Kumpulkan sekutu dari berbagai bangsa yang bersedia bergabung dalam pertempuran terakhir melawan Malzar.
+   - **Tugas:** Mengunjungi kota-kota dan desa-desa, mendapatkan kepercayaan pemimpin lokal untuk memperkuat pasukan.
+
+3. **Menghadapi Bayangan Malzar:**
+   - **Deskripsi:** Sebelum menyerang benteng utama, tim harus mengalahkan pasukan elite Bayangan Malzar yang selalu mengintai.
+   - **Tugas:** Bertarung melawan unit-unit elite dalam beberapa pertempuran strategis.
+
+4. **Penyerbuan Benteng Neraka Merah:**
+   - **Deskripsi:** Setelah berhasil melewati rintangan, tim siap menyerang benteng Malzar di Neraka Merah.
+   - **Tugas:** Gunakan Pedang Cahaya untuk mengatasi pertahanan dan bertarung melawan Malzar dalam Pertempuran Terakhir.
+
+5. **Pembatalan Kekuasaan Malzar:**
+   - **Deskripsi:** Setelah menyerang benteng, tim harus mencari cara untuk membatalkan kekuatan abadi Malzar.
+   - **Tugas:** Temukan dan saksikan ritual kuno yang dapat mengakhiri tirani Malzar.
+
+### Fitur Game:
+
+- **Pembangunan Karakter:** Pemain bisa memilih karakter dengan kemampuan unik dan meningkatkan mereka sepanjang perjalanan.
+- **Sistem Pertempuran:** Gunakan strategi untuk mengalahkan musuh, baik dalam pertarungan satu lawan satu maupun dalam skala besar.
+- **Pembuatan Aliansi:** Interaksi dengan karakter non-pemain (NPC) dapat mempengaruhi jalannya cerita dan hasil misi.
+
+### Akhir Cerita:
+Game ini berakhir dengan pilihan akhir yang bergantung pada keputusan pemain sepanjang perjalanan. Apakah Malzar berhasil dihentikan, atau apakah ada konsekuensi tak terduga dari penggunaan Pedang Cahaya?
+
+Dengan struktur quest dan cerita seperti ini, game dapat memberikan pengalaman yang mendalam dan menarik bagi para pemain.
+
+
+Kamu: thankyou, exit
+Chatbot: Based on the context provided, it seems you're asking for a summary or key points from the text related to "Bab 3: Pertempuran Terakhir." Here's a concise overview:
+
+- Ardan and his companions discover the Sword of Light in an ancient temple.
+- They launch an attack on Malzar’s fortress located in Red Hell.
+- During their mission, they face numerous challenges, including the elite forces known as Bayangan Malzar, who are always lurking.
+- Malzar taunts them by claiming to be an eternal ruler and questioning their ability to defeat him.
+
+If you have any specific questions or need further clarification about this context, feel free to ask!
