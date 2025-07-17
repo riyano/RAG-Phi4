@@ -1,45 +1,8 @@
-PS C:\Users\RG> & "C:/Program Files/Python312/python.exe" c:/Users/RG/Desktop/RAG_CHAGPT.py
-c:\Users\RG\Desktop\RAG_CHAGPT.py:4: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:
-
->> from langchain.vectorstores import Chroma
-
-with new imports of:
-
->> from langchain_community.vectorstores import Chroma
-You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
-  from langchain.vectorstores import Chroma                # Vector DB lokal
-c:\Users\RG\Desktop\RAG_CHAGPT.py:5: LangChainDeprecationWarning: Importing HuggingFaceEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:
-
->> from langchain.embeddings import HuggingFaceEmbeddings
-
-with new imports of:
-
->> from langchain_community.embeddings import HuggingFaceEmbeddings
-You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>    
-  from langchain.embeddings import HuggingFaceEmbeddings   # Untuk membuat embedding teks
-C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\langchain\llms\__init__.py:549: LangChainDeprecationWarning: Importing LLMs from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
-
-`from langchain_community.llms import Ollama`.
-
-To install langchain-community run `pip install -U langchain-community`.
-  warnings.warn(
-📥 Memuat dokumen dari folder...
-🔍 Membuat retriever dari dokumen...
-c:\Users\RG\Desktop\RAG_CHAGPT.py:38: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
-  embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-2025-06-13 13:13:16.251048: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2025-06-13 13:13:18.033382: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-WARNING:tensorflow:From C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
 🤖 Mengaktifkan chatbot Phi-4 via Ollama...
-c:\Users\RG\Desktop\RAG_CHAGPT.py:53: LangChainDeprecationWarning: The class `Ollama` was deprecated in LangChain 0.3.1 and will be removed in 1.0.0. An updated version of the class exists in the :class:`~langchain-ollama package and should be used instead. To use it run `pip install -U :class:`~langchain-ollama` and import as `from :class:`~langchain_ollama import OllamaLLM``.
-  llm = Ollama(model="phi4", base_url="http://localhost:11434", temperature=0.3)
 ✅ Chatbot siap digunakan! Ketik pertanyaan (dalam Bahasa Indonesia atau Inggris)
 Ketik 'exit' untuk keluar.
 
 Kamu: you know about Malzar?
-c:\Users\RG\Desktop\RAG_CHAGPT.py:93: LangChainDeprecationWarning: The method `Chain.run` was deprecated in langchain 0.1.0 and will be removed in 1.0. Use :meth:`~invoke` instead.
-  response = chatbot.run(user_input)
 Chatbot: Based on the provided context, Malzar appears to be a significant antagonist in Ardan's journey. He is associated with the "Shadow of Malzar," which is described as an elite army that constantly poses threats to Ardan and his allies. The goal of finding the Sword of Light suggests that it is crucial for stopping Malzar. Additionally, Liana mentions preventing the world from falling into the hands of the "Demon King," implying that Malzar may hold a title or role similar to that of a Demon King.
 
 Overall, while specific details about Malzar's identity and motivations are not provided in the context, he is clearly portrayed as a formidable enemy with considerable power and influence.
@@ -111,99 +74,27 @@ Kamu: exit
 👋 Sampai jumpa!
 
 
-c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:4: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:
-
->> from langchain.vectorstores import Chroma
-
-with new imports of:
-
->> from langchain_community.vectorstores import Chroma
-You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
-  from langchain.vectorstores import Chroma                # Vector DB lokal
-c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:5: LangChainDeprecationWarning: Importing HuggingFaceEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:
-
->> from langchain.embeddings import HuggingFaceEmbeddings
-
-with new imports of:
-
->> from langchain_community.embeddings import HuggingFaceEmbeddings
-You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
-  from langchain.embeddings import HuggingFaceEmbeddings   # Untuk membuat embedding teks
-C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\langchain\llms\__init__.py:549: LangChainDeprecationWarning: Importing LLMs from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:   
-
-`from langchain_community.llms import Ollama`.
-
-To install langchain-community run `pip install -U langchain-community`.
-  warnings.warn(
 📥 Memuat dokumen dari folder...
 🔍 Membuat retriever dari dokumen...
-c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:38: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
-  embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-2025-06-23 15:24:15.026324: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2025-06-23 15:24:18.431286: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-WARNING:tensorflow:From C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
 🤖 Mengaktifkan chatbot Phi-4 via Ollama...
-c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:53: LangChainDeprecationWarning: The class `Ollama` was deprecated in LangChain 0.3.1 and will be removed in 1.0.0. An updated version of the class exists in the :class:`~langchain-ollama package and should be used instead. To use it run `pip install -U :class:`~langchain-ollama` and import as `from :class:`~langchain_ollama import OllamaLLM``.
-  llm = Ollama(model="phi4", base_url="http://localhost:11434", temperature=0.3)
 ✅ Chatbot siap digunakan! Ketik pertanyaan (dalam Bahasa Indonesia atau Inggris)
 Ketik 'exit' untuk keluar.
 
-c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:4: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:
-
->> from langchain.vectorstores import Chroma
-
-with new imports of:
-
->> from langchain_community.vectorstores import Chroma
-You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
-  from langchain.vectorstores import Chroma                # Vector DB lokal
-c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:5: LangChainDeprecationWarning: Importing HuggingFaceEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:
-
->> from langchain.embeddings import HuggingFaceEmbeddings
-
-with new imports of:
-
->> from langchain_community.embeddings import HuggingFaceEmbeddings
-You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
-  from langchain.embeddings import HuggingFaceEmbeddings   # Untuk membuat embedding teks
-C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\langchain\llms\__init__.py:549: LangChainDeprecationWarning: Importing LLMs from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:   
-
-`from langchain_community.llms import Ollama`.
-
-To install langchain-community run `pip install -U langchain-community`.
-  warnings.warn(
-📥 Memuat dokumen dari folder...
-🔍 Membuat retriever dari dokumen...
-c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:38: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
-  embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-2025-06-24 14:59:30.003725: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2025-06-24 14:59:33.922967: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-WARNING:tensorflow:From C:\Users\RG\AppData\Roaming\Python\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
 🤖 Mengaktifkan chatbot Phi-4 via Ollama...
-c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:53: LangChainDeprecationWarning: The class `Ollama` was deprecated in LangChain 0.3.1 and will be removed in 1.0.0. An updated version of the class exists in the :class:`~langchain-ollama package and should be used instead. To use it run `pip install -U :class:`~langchain-ollama` and import as `from :class:`~langchain_ollama import OllamaLLM``.
-  llm = Ollama(model="phi4", base_url="http://localhost:11434", temperature=0.3)
 ✅ Chatbot siap digunakan! Ketik pertanyaan (dalam Bahasa Indonesia atau Inggris)
 Ketik 'exit' untuk keluar.
 
 Kamu: buatkan saya quest game dari ceritanya
-c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:93: LangChainDeprecationWarning: The method `Chain.run` was deprecated in langchain 0.1.0 and will be removed in 1.0. Use :meth:`~invoke` instead.
-  response = chatbot.run(user_input)
 ❌ Terjadi kesalahan: Ollama call failed with status code 500. Details: {"error":"model requires more system memory (11.0 GiB) than is available (8.7 GiB)"}
 
 Kamu: exit
 👋 Sampai jumpa!
 
 🤖 Mengaktifkan chatbot Phi-4 via Ollama...
-c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:53: LangChainDeprecationWarning: The class `Ollama` was deprecated in LangChain 0.3.1 and will be removed in 1.0.0. An updated version of the class exists in the :class:`~langchain-ollama package and should be used instead. To use it run `pip install -U :class:`~langchain-ollama` and import as `from :class:`~langchain_ollama import OllamaLLM``.
-  llm = Ollama(model="phi4", base_url="http://localhost:11434", temperature=0.3)
 ✅ Chatbot siap digunakan! Ketik pertanyaan (dalam Bahasa Indonesia atau Inggris)
 Ketik 'exit' untuk keluar.
 
 Kamu: bisakah kamu membuat quest game mengenai ceritanya?
-c:\Users\RG\Desktop\RAG+Phi4ForLaporan.py:93: LangChainDeprecationWarning: The method `Chain.run` was deprecated in langchain 0.1.0 and will be removed in 1.0. Use :meth:`~invoke` instead.
-  response = chatbot.run(user_input)
 Chatbot: Tentu! Berikut adalah konsep untuk sebuah quest game berdasarkan konteks yang diberikan:
 
 ### Judul Game: "Pedang Cahaya: Pertempuran Terakhir"
@@ -257,3 +148,88 @@ Chatbot: Based on the context provided, it seems you're asking for a summary or 
 - Malzar taunts them by claiming to be an eternal ruler and questioning their ability to defeat him.
 
 If you have any specific questions or need further clarification about this context, feel free to ask!
+
+Kamu: can you create some quest game?
+Chatbot: Certainly! Based on the context provided, here's an outline for a quest-style adventure game centered around Ardan's journey to find the Sword of Light and defeat Malzar.
+
+### Game Title: "Ardan's Quest: The Sword of Light"
+
+#### Chapter 1: The Beginning Adventure
+
+**Setting:**
+- **Location:** Harmonia, a peaceful village now in ruins.
+- **Objective:** Begin Ardan’s quest for vengeance and justice by finding the legendary Sword of Light.
+
+**Characters Introduced:**
+- **Ardan:** A brave young man from Harmonia who vows to defeat Malzar.
+- **The Wise Hermit:** An enigmatic figure who provides guidance about the Sword of Light.
+
+#### Main Quests:
+
+1. **Gather Information:**
+   - **Task:** Speak with surviving villagers and gather clues about the location of the Sword of Light.
+   - **Challenges:** Overcome obstacles such as blocked paths or hostile creatures guarding information.
+
+2. **Seek the Hermit's Wisdom:**
+   - **Task:** Travel to the hermit’s secluded dwelling in the nearby forest.
+   - **Challenges:** Navigate through dense forests, solve riddles posed by mystical guardians, and earn the hermit's trust.
+
+3. **The Trial of Courage:**
+   - **Task:** Prove your worthiness by completing a series of trials set by the hermit.
+   - **Challenges:** Engage in combat with shadowy minions, demonstrate bravery in perilous situations, and solve puzzles that test wisdom and resolve.
+
+4. **Discover the Sword’s Location:**
+   - **Task:** Use clues from the hermit to locate the hidden temple where the Sword of Light is kept.
+   - **Challenges:** Traverse treacherous terrains such as mountains or caves, avoid traps, and fend off creatures allied with Malzar.
+
+5. **Retrieve the Sword of Light:**
+   - **Task:** Enter the sacred temple and claim the legendary weapon.
+   - **Challenges:** Solve intricate puzzles to unlock the chamber containing the sword, face a guardian spirit, and prove your heart is pure.
+
+#### Side Quests:
+
+- **Helping Villagers:** Assist villagers in rebuilding their lives by completing tasks like gathering resources or defending against minor threats.
+
+- **Gathering Allies:** Recruit companions who can aid Ardan on his journey. Each ally has unique skills that will be useful in battles and challenges.
+
+- **Uncovering Secrets:** Discover hidden lore about Harmonia, Malzar’s past, and the origins of the Sword of Light through ancient texts or encounters with mystical beings.
+
+#### Final Chapter:
+
+**Confrontation with Malzar:**
+- **Setting:** The dark fortress where Malzar resides.
+- **Objective:** Use the power of the Sword of Light to defeat Malzar and restore peace to Harmonia.
+- **Challenges:** Navigate a labyrinthine fortress, overcome powerful minions, and face Malzar in an epic battle.
+
+**Resolution:**
+- Ardan’s journey concludes with either victory or sacrifice, depending on choices made throughout the game. The fate of Harmonia hangs in balance as players determine the outcome of this epic quest.
+
+This outline provides a framework for developing a rich, immersive adventure game that captures the essence of Ardan's heroic journey.
+
+
+Mengaktifkan chatbot Phi-4 via Ollama...
+✅ Chatbot siap digunakan! Ketik pertanyaan (dalam Bahasa Indonesia atau Inggris)
+Ketik 'exit' untuk keluar.
+
+Kamu: siapa itu malzar?
+Chatbot: Malzar adalah antagonis utama dalam cerita yang disebutkan. Dia digambarkan sebagai "penguasa abadi" dan pemimpin pasukan elite yang dikenal sebagai Bayangan Malzar. Bentengnya terletak di Neraka Merah, tempat Ardan dan kawan-kawannya menyerang setelah menemukan Pedang Cahaya di kuil kuno. Malzar tampaknya memiliki ambisi untuk tetap berkuasa dan menghalangi upaya para pahlawan untuk mengalahkannya.
+
+Kamu: kapan indonesia merdeka dan jelaskan bagaimana pada saat itu negera ini bisa mencapai kemenrdekaanya?
+Chatbot: Saya tidak memiliki informasi spesifik tentang konteks yang diberikan untuk menjawab pertanyaan tentang kemerdekaan Indonesia. Namun, saya dapat memberikan informasi umum mengenai kemerdekaan Indonesia.
+
+Indonesia merdeka pada tanggal 17 Agustus 1945. Kemerdekaan ini dicapai setelah berbagai faktor dan peristiwa penting:
+
+1. **Perang Dunia II**: Jepang menyerbu dan menduduki Indonesia selama Perang Dunia II, yang memulai proses melemahkan kekuasaan Belanda di wilayah tersebut.      
+
+2. **Proklamasi Kemerdekaan**: Pada tanggal 17 Agustus 1945, dua hari setelah berakhirnya Perang Dunia II dan pengumuman penyerahan Jepang, Sukarno dan Mohammad Hatta menyatakan kemerdekaan Indonesia.
+
+3. **Kesadaran Nasional**: Ada pertumbuhan kesadaran nasional di kalangan penduduk Indonesia yang dipengaruhi oleh gerakan kebangsaan sebelumnya dan perjuangan melawan kolonialisme Belanda.
+
+4. **Dukungan Internasional**: Setelah Perang Dunia II, ada perubahan dinamika politik global yang mendukung dekolonisasi di Asia dan Afrika.
+
+5. **Perang Kemerdekaan Indonesia**: Setelah proklamasi kemerdekaan, terjadi konflik bersenjata antara Tentara Nasional Indonesia (TNI) dan Belanda yang akhirnya berakhir dengan penandatanganan Perjanjian Renville pada tahun 1948 dan akhirnya Perjanjian Jakarta pada tahun 1949, di mana Belanda mengakui kemerdekaan Republik Indonesia.
+
+Jika Anda memiliki pertanyaan lebih lanjut atau memerlukan informasi tambahan, silakan bertanya!
+
+Kamu: apakah kamu tau mengenai Universitas Dian Nuswantoro
+Chatbot: Berdasarkan konteks yang diberikan, tidak ada informasi yang tersedia tentang Universitas Dian Nuswantoro. Konteks tersebut berfokus pada cerita fiksi dengan karakter dan peristiwa seperti Ardan, Malzar, Pedang Cahaya, dan Pertempuran Terakhir di Neraka Merah. Jika Anda ingin tahu lebih lanjut tentang Universitas Dian Nuswantoro, saya tidak memiliki informasi spesifik mengenai hal tersebut berdasarkan konteks yang disediakan.
